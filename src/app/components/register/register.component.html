@@ -1,0 +1,49 @@
+<div class="container-fluid login-container">
+    <div class="row">
+      <div class="col-md-5 login-form">
+        <div>
+          <h4 class="text-center mb-4"><i class="bi bi-chat-dots"></i>Stay Connected</h4>
+          
+          <form [formGroup]="registerForm">
+            <mat-form-field appearance="outline" class="w-100">
+                <mat-label> Username</mat-label>
+                <mat-icon size="sm" matPrefix>person</mat-icon>
+                <input matInput type="text" formControlName="username"/>
+             </mat-form-field>
+             <mat-form-field appearance="outline" class="w-100">
+                <mat-label> Email</mat-label>
+                <mat-icon size="sm" matPrefix>email</mat-icon>
+                <input matInput type="text" formControlName="email"/>
+             </mat-form-field>
+             <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Phone</mat-label>
+                <mat-icon size="sm" matPrefix>phone</mat-icon>
+                <input matInput type="number" formControlName="phone"/>
+             </mat-form-field>
+            
+            <mat-form-field appearance="outline" class="w-100">
+              <mat-icon size="sm" matPrefix>{{ isShowPassword ?'lock_open':'lock'}}</mat-icon>
+              <mat-label>Password</mat-label>
+              <input matInput type="password" formControlName="password" />
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="w-100">
+                <mat-icon size="sm" matPrefix>{{ isShowPassword ?'lock_open':'lock'}}</mat-icon>
+                <mat-label>Confirm Password</mat-label>
+                <input matInput type="password" formControlName="confirmPassword" />
+              </mat-form-field>
+            <button mat-stroked-button color="accent" (click)="Register()" class="w-100 mt-3">Register</button>
+            <div class="d-flex justify-content-center mt-2">
+              already have an account ? <a href="#" class="text-decoration-none px-2"> login</a>
+            </div>
+          </form>
+        </div>
+      </div>
+  
+      <div class="col-md-7 welcome-section">
+        <h1 class="welcome-text">Welcome.</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <button mat-button color="accent" >Sign up now</button>
+      </div>
+    </div>
+  </div>
+  
